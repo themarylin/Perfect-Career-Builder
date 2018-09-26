@@ -25,24 +25,24 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/icomoon.css')}}">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
 
 	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/magnific-popup.css')}}">
 
 	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/owl.theme.default.min.css')}}">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="{{url_for('static', filename='js/modernizr-2.6.2.min.js')}}"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -77,7 +77,7 @@
 			</div>
 		</nav>
 
-		<section id="home" class="video-hero" style="height: 700px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;"
+		<section id="home" class="video-hero" style="height: 700px; background-image: url(../static/images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;"
 		 data-section="home">
 			<div class="overlay"></div>
 			<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=vqqt5p0q-eU',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
@@ -103,21 +103,21 @@
 						<div class="item">
 							<div class="col-md-8 col-md-offset-2">
 								<div class="featured-entry">
-									<img class="img-responsive" src="images/dashboard_full_1.jpg" alt="">
+									<img class="img-responsive" src="../static/images/dashboard_full_1.jpg" alt="">
 								</div>
 							</div>
 						</div>
 						<div class="item">
 							<div class="col-md-8 col-md-offset-2">
 								<div class="featured-entry">
-									<img class="img-responsive" src="images/dashboard_full_2.jpg" alt="">
+									<img class="img-responsive" src="../static/images/dashboard_full_2.jpg" alt="">
 								</div>
 							</div>
 						</div>
 						<div class="item">
 							<div class="col-md-8 col-md-offset-2">
 								<div class="featured-entry">
-									<img class="img-responsive" src="images/dashboard_full_3.jpg" alt="">
+									<img class="img-responsive" src="../static/images/dashboard_full_3.jpg" alt="">
 								</div>
 							</div>
 						</div>
@@ -204,7 +204,7 @@
 			<div class="container">
 				<div class="row mobile-wrap">
 					<div class="col-md-5 animate-box">
-						<div class="mobile-img" style="background-image: url(images/mobile-2.jpg);"></div>
+						<div class="mobile-img" style="background-image: url(../static/images/mobile-2.jpg);"></div>
 					</div>
 					<div class="col-md-7 animate-box">
 						<div class="desc">
@@ -238,7 +238,7 @@
 				</div>
 				<div class="row mobile-wrap">
 					<div class="col-md-5 col-md-push-7 animate-box">
-						<div class="mobile-img" style="background-image: url(images/mobile-1.jpg);"></div>
+						<div class="mobile-img" style="background-image: url(../static/images/mobile-1.jpg);"></div>
 					</div>
 					<div class="col-md-7 col-md-pull-5 animate-box">
 						<div class="desc">
@@ -273,7 +273,7 @@
 			</div>
 		</div>
 
-		<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_img_1.jpg);"
+		<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(../static/images/cover_img_1.jpg);"
 		 data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
@@ -326,7 +326,7 @@
 							<h2>Building the Mention Sales Application on Unapp</h2>
 							<p class="admin"><span>May 12, 2018</span></p>
 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-							<p class="author-wrap"><a href="#" class="author-img" style="background-image: url(images/person1.jpg);"></a> <a
+							<p class="author-wrap"><a href="#" class="author-img" style="background-image: url(../static/images/person1.jpg);"></a> <a
 								 href="#" class="author">by Dave Miller</a></p>
 						</article>
 					</div>
@@ -335,7 +335,7 @@
 							<h2>Building the Mention Sales Application on Unapp</h2>
 							<p class="admin"><span>May 12, 2018</span></p>
 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-							<p class="author-wrap"><a href="#" class="author-img" style="background-image: url(images/person2.jpg);"></a> <a
+							<p class="author-wrap"><a href="#" class="author-img" style="background-image: url(../static/images/person2.jpg);"></a> <a
 								 href="#" class="author">by Dave Miller</a></p>
 						</article>
 					</div>
@@ -344,7 +344,7 @@
 							<h2>Building the Mention Sales Application on Unapp</h2>
 							<p class="admin"><span>May 12, 2018</span></p>
 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-							<p class="author-wrap"><a href="#" class="author-img" style="background-image: url(images/person3.jpg);"></a> <a
+							<p class="author-wrap"><a href="#" class="author-img" style="background-image: url(../static/images/person3.jpg);"></a> <a
 								 href="#" class="author">by Dave Miller</a></p>
 						</article>
 					</div>
@@ -352,7 +352,7 @@
 			</div>
 		</div>
 
-		<div id="colorlib-subscribe" class="colorlib-subscribe" style="background-image: url(images/cover_img_1.jpg);"
+		<div id="colorlib-subscribe" class="colorlib-subscribe" style="background-image: url(../static/images/cover_img_1.jpg);"
 		 data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
@@ -529,26 +529,26 @@
 	</div>
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="{{url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="{{url_for('static', filename='js/jquery.waypoints.min.js')}}"></script>
 	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
+	<script src="{{url_for('static', filename='js/jquery.stellar.min.js')}}"></script>
 	<!-- YTPlayer -->
-	<script src="js/jquery.mb.YTPlayer.min.js"></script>
+	<script src="{{url_for('static', filename='js/jquery.mb.YTPlayer.min.js')}}"></script>
 	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="{{url_for('static', filename='js/owl.carousel.min.js')}}"></script>
 	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+	<script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+	<script src="{{url_for('static', filename='js/magnific-popup-options.js')}}"></script>
 	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
+	<script src="{{url_for('static', filename='js/jquery.countTo.js')}}"></script>
 	<!-- Main -->
-	<script src="js/main.js"></script>
+	<script src="{{url_for('static', filename='js/main.js')}}"></script>
 
 </body>
 
