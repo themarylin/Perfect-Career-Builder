@@ -31,12 +31,15 @@ app = Flask(__name__)
 # Samples_Metadata = Base.classes.sample_metadata
 # Samples = Base.classes.samples
 
-
 @app.route("/")
 def index():
     """Return the homepage."""
     return render_template("index.html")
 
+@app.route("/index.html")
+def home():
+    """Return the homepage."""
+    return render_template("index.html")
 
 @app.route("/phase1.html")
 def phase1():
@@ -57,6 +60,11 @@ def phase3():
 def phase4():
     """Return the homepage."""
     return render_template("phase4.html")
+
+@app.route('/api/<int:id>', methods=['GET'])
+def get_one_sighting(id):
+    sighting = session.query(Sighting).filter(Sighting.id == id).one()
+    return render_template('single_sighting.html', sighting=sighting)
 
 
 if __name__ == "__main__":
