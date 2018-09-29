@@ -31,22 +31,40 @@ app = Flask(__name__)
 # Samples_Metadata = Base.classes.sample_metadata
 # Samples = Base.classes.samples
 
-
 @app.route("/")
 def index():
     """Return the homepage."""
     return render_template("index.html")
 
+@app.route("/index.html")
+def home():
+    """Return the homepage."""
+    return render_template("index.html")
 
-@app.route("/about")
+@app.route("/phase1.html")
 def phase1():
     """Return the Map.html."""
-    return render_template("work.html")
+    return render_template("phase1.html")
 
-@app.route("/services")
+@app.route("/phase2.html")
 def phase2():
     """Return the homepage."""
-    return render_template("services.html")
+    return render_template("phase2.html")
+
+@app.route("/phase3.html")
+def phase3():
+    """Return the homepage."""
+    return render_template("phase3.html")
+
+@app.route("/phase4.html")
+def phase4():
+    """Return the homepage."""
+    return render_template("phase4.html")
+
+@app.route('/api/<int:id>', methods=['GET'])
+def get_one_sighting(id):
+    sighting = session.query(Sighting).filter(Sighting.id == id).one()
+    return render_template('single_sighting.html', sighting=sighting)
 
 
 if __name__ == "__main__":

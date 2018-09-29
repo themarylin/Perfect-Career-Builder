@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>State Statistics: {{ feature.city.title()}}, {{ feature.state.upper() }}</title>
+
+    <!-- 3rd Party CSS -->
+    <link href="/static/js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/js/leaflet/leaflet.css" rel="stylesheet"/>
+    <link href="/static/css/app.css" rel="stylesheet"/>
+
+    <!-- 3rd Party JS -->
+    <!-- Leaflet's JS must come AFTER its CSS-->
+    <script src="/static/js/leaflet/leaflet.js"></script>
+    <script src="/static/js/jquery/jquery.min.js"></script>
+    <script src="/static/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/d3/d3.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation TODO: create as include file -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">UFOs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('list_features') }}">features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('choropleth') }}">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">{{ feature.city.title()}}, {{ feature.state.upper() }}</h1>
+          <h2>{{ feature.country.upper() }}</h2>
+          <p class="lead">
+            Duration: {{ feature.duration }} seconds<br/>
+            Shape: {{ feature.shape }}<br/>
+            Latitude: {{ feature.latitude }}<br/>
+            Longitude: {{ feature.longitude }}
+          </p>
+
+          <div id="map"><!-- Map goes here --></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Application-specific JS -->
+    <script>
+      // This is a smelly way to pass information from the backend to the front-end,
+      // but it works. ¯\_(ツ)_/¯
+      const feature_id = "{{ feature.id }}";
+    </script>
+    <script src="/js/state_feature.js"></script>
+    
+  </body>
+
+</html>
