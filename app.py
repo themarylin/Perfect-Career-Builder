@@ -68,11 +68,6 @@ def phase4():
     """Return the homepage."""
     return render_template("phase4.html")
 
-# @app.route('/api/<int:id>', methods=['GET'])
-# def get_one_sighting(id):
-#     sighting = session.query(Sighting).filter(Sighting.id == id).one()
-#     return render_template('single_sighting.html', sighting=sighting)
-
 #################################################
 # API endpoints
 #################################################

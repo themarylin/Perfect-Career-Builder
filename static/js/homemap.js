@@ -8,20 +8,25 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
     maxZoom: 18
 }).addTo(map);
 
+
 //add hover info
 var info = L.control();
 
-info.onAdd = function(map) {
+info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info');
     this.update();
     return this._div;
+
 };
 
-info.update = function (props) {
-    this._div.innerHTML = '<h4>US Population Density</h4>' + (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-        : 'Hover over a state');
+info.update = function (values) {
+    this._div.innerHTML = '<h4>US DataScience Job Market</h4>' + (values ?
+        '<b>' + values.name + '</b><br /><br />' + 'Total Jobs Available: '+ values.total_jobs + '<br />' +
+        'Number of Jobs for every 1000 jobs: ' + (values.jobs_per_1000).toFixed(2) + '<br />' +
+        'Average Annual Salary: ' + (values.a_mean).toFixed(2) :
+        'Click on a State');
 }
+
 info.addTo(map);
 
 //add color to the map
@@ -50,7 +55,8 @@ function densityStyle(feature) {
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
-        mouseout: resetHighlight
+        mouseout: resetHighlight,
+        click: displayStats
     })
 }
 
@@ -68,8 +74,25 @@ function highlightFeature(e) {
         dashArray: '',
         fillOpacity: 0.7
     });
+}
 
-    info.update(layer.feature.properties);
+function displayStats(e) {
+    var layer = e.target;
+    var stateName = layer.feature.properties.name;
+    var data = {};
+    d3.json("/api/occupationstats").then(function (response) {
+        response.forEach(function (s) {
+            if (s.attributes.STATE == stateName ) {
+                data.name = stateName;
+                data.total_jobs = s.attributes.TOT_EMP;
+                data.a_mean = s.attributes.A_MEAN;
+                data.jobs_per_1000 = s.attributes.JOBS_1000;
+                console.log(data);
+                info.update(data);
+            };
+        });
+    });
+    
 }
 
 
