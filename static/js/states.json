@@ -2,7 +2,7 @@
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",
-            "id": "01",
+            "id": "1",
             "properties": {
                 "name": "Alabama",
                 "density": 94.65
@@ -50,7 +50,7 @@
         },
         {
             "type": "Feature",
-            "id": "02",
+            "id": "0",
             "properties": {
                 "name": "Alaska",
                 "density": 1.264
@@ -1293,7 +1293,7 @@
         },
         {
             "type": "Feature",
-            "id": "04",
+            "id": "3",
             "properties": {
                 "name": "Arizona",
                 "density": 57.05
@@ -1340,7 +1340,7 @@
         },
         {
             "type": "Feature",
-            "id": "05",
+            "id": "2",
             "properties": {
                 "name": "Arkansas",
                 "density": 56.43
@@ -1392,7 +1392,7 @@
         },
         {
             "type": "Feature",
-            "id": "06",
+            "id": "4",
             "properties": {
                 "name": "California",
                 "density": 241.7
@@ -1500,7 +1500,7 @@
         },
         {
             "type": "Feature",
-            "id": "08",
+            "id": "5",
             "properties": {
                 "name": "Colorado",
                 "density": 49.33
@@ -1531,7 +1531,7 @@
         },
         {
             "type": "Feature",
-            "id": "09",
+            "id": "6",
             "properties": {
                 "name": "Connecticut",
                 "density": 739.1
@@ -1562,7 +1562,7 @@
         },
         {
             "type": "Feature",
-            "id": "10",
+            "id": "8",
             "properties": {
                 "name": "Delaware",
                 "density": 464.3
@@ -1590,7 +1590,7 @@
         },
         {
             "type": "Feature",
-            "id": "11",
+            "id": "7",
             "properties": {
                 "name": "District of Columbia",
                 "density": 10065
@@ -1610,7 +1610,7 @@
         },
         {
             "type": "Feature",
-            "id": "12",
+            "id": "9",
             "properties": {
                 "name": "Florida",
                 "density": 353.4
@@ -1703,7 +1703,7 @@
         },
         {
             "type": "Feature",
-            "id": "13",
+            "id": "10",
             "properties": {
                 "name": "Georgia",
                 "density": 169.5
@@ -1769,7 +1769,7 @@
         },
         {
             "type": "Feature",
-            "id": "15",
+            "id": "12",
             "properties": {
                 "name": "Hawaii",
                 "density": 214.1
@@ -1851,7 +1851,7 @@
         },
         {
             "type": "Feature",
-            "id": "16",
+            "id": "14",
             "properties": {
                 "name": "Idaho",
                 "density": 19.15
@@ -1932,7 +1932,7 @@
         },
         {
             "type": "Feature",
-            "id": "17",
+            "id": "15",
             "properties": {
                 "name": "Illinois",
                 "density": 231.5
@@ -2014,7 +2014,7 @@
         },
         {
             "type": "Feature",
-            "id": "18",
+            "id": "16",
             "properties": {
                 "name": "Indiana",
                 "density": 181.7
@@ -2075,7 +2075,7 @@
         },
         {
             "type": "Feature",
-            "id": "19",
+            "id": "13",
             "properties": {
                 "name": "Iowa",
                 "density": 54.81
@@ -2140,7 +2140,7 @@
         },
         {
             "type": "Feature",
-            "id": "20",
+            "id": "17",
             "properties": {
                 "name": "Kansas",
                 "density": 35.09
@@ -2168,7 +2168,7 @@
         },
         {
             "type": "Feature",
-            "id": "21",
+            "id": "18",
             "properties": {
                 "name": "Kentucky",
                 "density": 110
@@ -2258,7 +2258,7 @@
         },
         {
             "type": "Feature",
-            "id": "22",
+            "id": "19",
             "properties": {
                 "name": "Louisiana",
                 "density": 105
@@ -2349,7 +2349,7 @@
         },
         {
             "type": "Feature",
-            "id": "23",
+            "id": "22",
             "properties": {
                 "name": "Maine",
                 "density": 43.04
@@ -2430,7 +2430,7 @@
         },
         {
             "type": "Feature",
-            "id": "24",
+            "id": "21",
             "properties": {
                 "name": "Maryland",
                 "density": 596.3
@@ -2515,7 +2515,7 @@
         },
         {
             "type": "Feature",
-            "id": "25",
+            "id": "20",
             "properties": {
                 "name": "Massachusetts",
                 "density": 840.2
@@ -2565,7 +2565,7 @@
         },
         {
             "type": "Feature",
-            "id": "26",
+            "id": "23",
             "properties": {
                 "name": "Michigan",
                 "density": 173.9
@@ -2746,7 +2746,7 @@
         },
         {
             "type": "Feature",
-            "id": "27",
+            "id": "24",
             "properties": {
                 "name": "Minnesota",
                 "density": 67.14
@@ -2844,7 +2844,7 @@
         },
         {
             "type": "Feature",
-            "id": "28",
+            "id": "26",
             "properties": {
                 "name": "Mississippi",
                 "density": 63.50
@@ -2905,7 +2905,7 @@
         },
         {
             "type": "Feature",
-            "id": "29",
+            "id": "25",
             "properties": {
                 "name": "Missouri",
                 "density": 87.26
@@ -2973,7 +2973,7 @@
         },
         {
             "type": "Feature",
-            "id": "30",
+            "id": "27",
             "properties": {
                 "name": "Montana",
                 "density": 6.858
@@ -3040,7 +3040,7 @@
         },
         {
             "type": "Feature",
-            "id": "31",
+            "id": "30",
             "properties": {
                 "name": "Nebraska",
                 "density": 23.97
@@ -3084,7 +3084,7 @@
         },
         {
             "type": "Feature",
-            "id": "32",
+            "id": "34",
             "properties": {
                 "name": "Nevada",
                 "density": 24.80
@@ -3120,7 +3120,7 @@
         },
         {
             "type": "Feature",
-            "id": "33",
+            "id": "31",
             "properties": {
                 "name": "New Hampshire",
                 "density": 147
@@ -3163,7 +3163,7 @@
         },
         {
             "type": "Feature",
-            "id": "34",
+            "id": "32",
             "properties": {
                 "name": "New Jersey",
                 "density": 1189
@@ -3210,7 +3210,7 @@
         },
         {
             "type": "Feature",
-            "id": "35",
+            "id": "33",
             "properties": {
                 "name": "New Mexico",
                 "density": 17.16
@@ -3242,7 +3242,7 @@
         },
         {
             "type": "Feature",
-            "id": "36",
+            "id": "35",
             "properties": {
                 "name": "New York",
                 "density": 412.3
@@ -3325,7 +3325,7 @@
         },
         {
             "type": "Feature",
-            "id": "37",
+            "id": "28",
             "properties": {
                 "name": "North Carolina",
                 "density": 198.2
@@ -3401,7 +3401,7 @@
         },
         {
             "type": "Feature",
-            "id": "38",
+            "id": "29",
             "properties": {
                 "name": "North Dakota",
                 "density": 9.916
@@ -3432,7 +3432,7 @@
         },
         {
             "type": "Feature",
-            "id": "39",
+            "id": "36",
             "properties": {
                 "name": "Ohio",
                 "density": 281.9
@@ -3494,7 +3494,7 @@
         },
         {
             "type": "Feature",
-            "id": "40",
+            "id": "37",
             "properties": {
                 "name": "Oklahoma",
                 "density": 55.22
@@ -3554,7 +3554,7 @@
         },
         {
             "type": "Feature",
-            "id": "41",
+            "id": "38",
             "properties": {
                 "name": "Oregon",
                 "density": 40.33
@@ -3625,7 +3625,7 @@
         },
         {
             "type": "Feature",
-            "id": "42",
+            "id": "39",
             "properties": {
                 "name": "Pennsylvania",
                 "density": 284.3
@@ -3673,7 +3673,7 @@
         },
         {
             "type": "Feature",
-            "id": "44",
+            "id": "41",
             "properties": {
                 "name": "Rhode Island",
                 "density": 1006
@@ -3709,7 +3709,7 @@
         },
         {
             "type": "Feature",
-            "id": "45",
+            "id": "42",
             "properties": {
                 "name": "South Carolina",
                 "density": 155.4
@@ -3768,7 +3768,7 @@
         },
         {
             "type": "Feature",
-            "id": "46",
+            "id": "43",
             "properties": {
                 "name": "South Dakota",
                 "density": 98.07
@@ -3812,7 +3812,7 @@
         },
         {
             "type": "Feature",
-            "id": "47",
+            "id": "44",
             "properties": {
                 "name": "Tennessee",
                 "density": 88.08
@@ -3870,7 +3870,7 @@
         },
         {
             "type": "Feature",
-            "id": "48",
+            "id": "45",
             "properties": {
                 "name": "Texas",
                 "density": 98.07
@@ -4037,7 +4037,7 @@
         },
         {
             "type": "Feature",
-            "id": "49",
+            "id": "46",
             "properties": {
                 "name": "Utah",
                 "density": 34.30
@@ -4064,7 +4064,7 @@
         },
         {
             "type": "Feature",
-            "id": "50",
+            "id": "49",
             "properties": {
                 "name": "Vermont",
                 "density": 67.73
@@ -4107,7 +4107,7 @@
         },
         {
             "type": "Feature",
-            "id": "51",
+            "id": "47",
             "properties": {
                 "name": "Virginia",
                 "density": 204.5
@@ -4212,7 +4212,7 @@
         },
         {
             "type": "Feature",
-            "id": "53",
+            "id": "50",
             "properties": {
                 "name": "Washington",
                 "density": 102.6
@@ -4309,7 +4309,7 @@
         },
         {
             "type": "Feature",
-            "id": "54",
+            "id": "52",
             "properties": {
                 "name": "West Virginia",
                 "density": 77.06
@@ -4389,7 +4389,7 @@
         },
         {
             "type": "Feature",
-            "id": "55",
+            "id": "51",
             "properties": {
                 "name": "Wisconsin",
                 "density": 105.2
@@ -4479,7 +4479,7 @@
         },
         {
             "type": "Feature",
-            "id": "56",
+            "id": "53",
             "properties": {
                 "name": "Wyoming",
                 "density": 5.851
@@ -4507,7 +4507,7 @@
         },
         {
             "type": "Feature",
-            "id": "72",
+            "id": "40",
             "properties": {
                 "name": "Puerto Rico",
                 "density": 1082
