@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy import desc
 
 from flask import Flask, jsonify, render_template
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
