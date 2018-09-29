@@ -1,0 +1,308 @@
+Python
+52.6%
+45.8%
+30.3%
+R
+52.1%
+49.0%
+46.9%
+SQL
+34.9%
+35.5%
+30.9%
+RapidMiner
+32.8%
+32.6%
+31.5%
+Excel
+28.1%
+33.6%
+22.9%
+Spark
+22.7%
+21.6%
+11.3%
+Anaconda
+21.8%
+16.0%
+na
+Tensorflow
+20.2%
+6.8%
+na
+scikit-learn
+19.5%
+17.2%
+8.3%
+Tableau
+19.4%
+18.5%
+12.4%
+KNIME
+19.1%
+18.0%
+20.0%
+Hadoop
+15.0%
+22.1%
+18.4%
+Java
+13.8%
+16.8%
+14.1%
+Microsoft SQL Server
+11.6%
+10.8%
+9.7%
+Microsoft Power BI
+10.2%
+5.6%
+3.6%
+Weka
+9.8%
+10.9%
+11.2%
+Unix shell/awk/gawk
+9.6%
+10.4%
+8.0
+Keras
+9.5%
+na
+na
+PyCharm
+9.0%
+na
+na
+Dataiku
+8.2%
+7.8%
+2.0%
+Scala
+7.4%
+6.2%
+3.5%
+MATLAB
+7.4%
+9.1%
+8.8%
+SAS Base
+7.1%
+7.8%
+11.3%
+IBM SPSS Statistics
+6.8%
+8.4%
+7.7%
+Microsoft Azure Machine Learning
+6.4%
+5.1%
+3.7%
+IBM SPSS Modeler
+6.3%
+7.7%
+7.1%
+C/C++
+6.3%
+7.3%
+9.4%
+H2O.ai
+6.2%
+6.7%
+2.0%
+Theano
+5.8%
+5.1%
+3.8%
+SAS Enterprise Miner
+5.6%
+5.6%
+10.9%
+Alteryx
+5.3%
+3.0%
+5.6%
+MLlib
+4.5%
+11.6%
+3.3%
+Microsoft R Server
+4.3%
+na
+na
+IBM Watson / Watson Analytics
+4.3%
+4.2%
+2.1%
+QlikView
+4.2%
+5.3%
+4.2%
+Orange
+4.0%
+3.1%
+1.9%
+Microsoft
+3.4%
+0.9%
+na
+Caffe
+3.1%
+2.3%
+1.1%
+IBM DSX
+3.0%
+na
+na
+PyTorch
+3.0%
+na
+na
+Rattle
+2.6%
+3.6%
+4.2%
+TIBCO Spotfire
+2.5%
+2.8%
+4.3%
+Teradata
+2.4%
+na
+na
+Gnu Octave
+2.4%
+3.1%
+2.3%
+DL4J
+2.2%
+1.7%
+0.4%
+IBM Cognos
+2.1%
+2.2%
+1.8%
+DataRobot
+1.9%
+0.5%
+na
+JMP
+1.8%
+2.0%
+3.1%
+Pentaho
+1.8%
+2.3%
+2.7%
+mxnet
+1.8%
+0.6%
+na
+Oracle Adv. Analytics (51), 11.8% alone	 1.8%
+1.1%
+0.8%
+Amazon Machine Learning (49)	 1.7%
+1.9%
+0.7%
+Perl (49)	 1.7%
+2.3%
+2.9%
+Minitab (42)	 1.5%
+na
+na
+DataScience.com (40), 10.0% alone	 1.4%
+na
+na
+Mathematica (40)	 1.4%
+1.8%
+1.9%
+C4.5/C5.0/See5 (36)	 1.2%
+2.0%
+1.3%
+Torch (34)	 1.2%
+1.0%
+1.0%
+SAP HANA (34)	 1.2%
+1.2%
+na
+Stata (33)	 1.1%
+1.3%
+1.3%
+Julia (32)	 1.1%
+1.1%
+1.1%
+MicroStrategy (32)	 1.1%
+1.6%
+0.9%
+Vowpal Wabbit (32)	 1.1%
+1.6%
+1.3%
+SAP BusinessObjects Predictive Analytics (31), 6.5% alone	 1.1%
+1.5%
+3.0%
+Angoss (29), 34.5% alone	 1.0%
+0.1%
+0.4%
+BigML (29)	 1.0%
+0.9%
+0.8%
+Lasagne (27)	 0.9%
+na
+na
+XLMiner (19)	 0.7%
+1.2%
+na
+Domino Data Labs (18), 11.1% alone	 0.6%
+na
+na
+F# (16), 12.5% alone	 0.6%
+0.4%
+0.7%
+Quest (formerly Statistica/ Dell/ StatSoft) (13), 7.7% alone	 0.5%
+1.2%
+1.7%
+Lisp (11), 9.1% alone	 0.4%
+0.2%
+0.4%
+BayesiaLab (11)	 0.4%
+0.6%
+0.6%
+Salford SPM/CART/RF/MARS/TreeNet (11)	 0.4%
+3.5%
+2.3%
+Clojure (8)	 0.3%
+0.4%
+0.5%
+RapidInsight/Veera (7)	 0.2%
+3.0%
+0.2%
+FICO (6)	 0.2%
+0.2%
+0.0%
+Ontotext GraphDB (6)	 0.2%
+0.2%
+0.0%
+Ayasdi (5)	 0.2%
+0.3%
+2.0%
+Lavastorm (5)	 0.2%
+0.4%
+0.4%
+Turi (former Dato/GraphLab) (5)	 0.2%
+2.4%
+0.5%
+Alpine Data Labs (4)	 0.1%
+0.6%
+0.5%
+Birst (3)	 0.1%
+0.2%
+0.1%
+Skytree (3)	 0.1%
+0.3%
+0.1%
+Actian (3)	 0.1%
+0.3%
+2.0%
+Sisense (2)	 0.1%
+0.2%
+0.2%

@@ -16,6 +16,7 @@ from flask import Flask, jsonify, request, make_response, url_for, render_templa
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.config['JSON_SORT_KEYS'] = False
 
 
 #################################################
@@ -33,6 +34,9 @@ DataScience = Base.classes.data_science_companies
 CommonWords = Base.classes.job_common_words
 # occupation-stats
 OccupationStats = Base.classes.occupation_stats
+# numByState
+numByState = Base.classes.numByState
+numByCompany = Base.classes.numByCompany
 
 #################################################
 # Main routes
@@ -126,6 +130,23 @@ def get_json(table):
                 'A_PCT90': result.A_PCT90
                 }
             } for result in results]
+    elif table=="numbystate":
+        data = [
+            {
+                'state': s.state,
+                'attributes':
+                {
+                    'totalPositions': s.position,
+                    'totalCompanies': s.company,
+                    'companies': [
+                        {
+                            'name': c.company,
+                            'pos': c.position,
+                        } for c in session.query(numByCompany.company,numByCompany.position).filter_by(state=s.state)
+                    ],
+                },
+            } for s in session.query(numByState)
+        ]
     else:
         return "Cannot find data table", 404
     return jsonify(data)
