@@ -21,9 +21,9 @@ info.onAdd = function (map) {
 
 info.update = function (values) {
     this._div.innerHTML = '<h4>US DataScience Job Market</h4>' + (values ?
-        '<b>' + values.name + '</b><br /><br />' + 'Total Jobs Available: '+ values.total_jobs + '<br />' +
+        '<b>' + values.name + '</b><br /><br />' + 'Total Jobs Available: ' + values.total_jobs + '<br />' +
         'Number of Jobs for every 1000 jobs: ' + (values.jobs_per_1000).toFixed(2) + '<br />' +
-        'Average Annual Salary: ' + (values.a_mean).toFixed(2) :
+        'Average Annual Salary: $' + (values.a_mean).toFixed(2) :
         'Click on a State');
 }
 
@@ -31,14 +31,14 @@ info.addTo(map);
 
 //add color to the map
 function getColor(d) {
-    return d > 1000 ? '#800026' :
-        d > 500 ? '#BD0026' :
-        d > 200 ? '#E31A1C' :
-        d > 100 ? '#FC4E2A' :
-        d > 50 ? '#FD8D3C' :
-        d > 20 ? '#FEB24C' :
-        d > 10 ? '#FED976' :
-        '#FFEDA0';
+    return d > 1000 ? '#0C2C84' :
+        d > 500 ? '#225EA8' :
+        d > 200 ? '#1D91C0' :
+        d > 100 ? '#41B6C4' :
+        d > 50 ? '#7FCDBB' :
+        d > 20 ? '#C7E9B4' :
+        d > 10 ? '#EDF8B1' :
+        '#FFFFD9';
 }
 
 function densityStyle(feature) {
@@ -56,18 +56,30 @@ function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
-        click: displayStats
     })
 }
 
 function resetHighlight(e) {
+    map.setView([37.8, -96], 4);
     geojson.resetStyle(e.target);
     info.update();
 }
 
 function highlightFeature(e) {
     var layer = e.target;
-
+    var stateName = layer.feature.properties.name;
+    var data = {};
+    d3.json("/api/occupationstats").then(function (response) {
+        response.forEach(function (s) {
+            if (s.attributes.STATE == stateName) {
+                data.name = stateName;
+                data.total_jobs = s.attributes.TOT_EMP;
+                data.a_mean = s.attributes.A_MEAN;
+                data.jobs_per_1000 = s.attributes.JOBS_1000;
+                info.update(data);
+            };
+        });
+    });
     layer.setStyle({
         weight: 4,
         color: '#666',
@@ -75,28 +87,6 @@ function highlightFeature(e) {
         fillOpacity: 0.7
     });
 }
-
-function displayStats(e) {
-    var layer = e.target;
-    var stateName = layer.feature.properties.name;
-    var data = {};
-    d3.json("/api/occupationstats").then(function (response) {
-        response.forEach(function (s) {
-            if (s.attributes.STATE == stateName ) {
-                data.name = stateName;
-                data.total_jobs = s.attributes.TOT_EMP;
-                data.a_mean = s.attributes.A_MEAN;
-                data.jobs_per_1000 = s.attributes.JOBS_1000;
-                console.log(data);
-                info.update(data);
-            };
-        });
-    });
-    
-}
-
-
-
 
 //this is where I add everything to the map. 
 //statesData is currently a json file located in my directories, but I need to be able to query data using python flask, and return a json.
