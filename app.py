@@ -73,7 +73,6 @@ def phase4():
     """Return the homepage."""
     return render_template("phase4.html")
 
-<<<<<<< HEAD
 # @TODO: fix this part of the code!!!!!!!~~~~~~~
 # this is where I gather data and slice it into my json file
 
@@ -102,12 +101,10 @@ ORDER BY cnt DESC""")
             us_states_data['features'][i]['properties']['mean_annual_wage'] = states[state]
 
     return jsonify(us_states_data)
-=======
 # @app.route('/api/<int:id>', methods=['GET'])
 # def get_one_sighting(id):
 #     sighting = session.query(Sighting).filter(Sighting.id == id).one()
 #     return render_template('single_sighting.html', sighting=sighting)
->>>>>>> jackie
 
 #################################################
 # API endpoints
