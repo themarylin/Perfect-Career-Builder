@@ -2222,3 +2222,66 @@ g.highlight>.label {
 .outliers-table tr:hover {
   background-color: #FFFF66;
 }
+
+/* use this to style phase 2 */
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+#states {
+  fill: #aaa;
+}
+
+#states .active {
+  fill: orange;
+}
+
+#state-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+#canvas {
+  position: relative;
+}
+
+.bar_charge {
+    stroke: steelblue;
+    stroke-width: 1px;
+}
+
+.bar_pay {
+    stroke: steelblue;
+    stroke-width: 1px;
+}
+
+div.tooltips {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: steelblue;
+  color: white;
+  border: 0px;
+  border-radius: 3px;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+.bar_charge:hover {
+  fill: steelblue !important;
+  cursor: pointer;
+}
+
+.bar_pay:hover {
+  fill: steelblue !important;
+  cursor: pointer;
+}

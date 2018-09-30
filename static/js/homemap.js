@@ -24,7 +24,7 @@ info.update = function (values) {
         '<b>' + values.name + '</b><br /><br />' + 'Total Jobs Available: ' + values.total_jobs + '<br />' +
         'Number of Jobs for every 1000 jobs: ' + (values.jobs_per_1000).toFixed(2) + '<br />' +
         'Average Annual Salary: $' + (values.a_mean).toFixed(2) :
-        'Click on a State');
+        'Hover over a State');
 }
 
 info.addTo(map);

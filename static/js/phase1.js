@@ -28,7 +28,7 @@ info.update = function (values) {
 
 info.addTo(map);
 
-//add color to the map
+//add color and highlights
 function getColor(d) {
     return d > 1000 ? '#0C2C84' :
         d > 500 ? '#225EA8' :
@@ -74,7 +74,8 @@ function resetFeature(e) {
     geojson.resetStyle(layer);
 }
 
-function renderBoxPlot(d) {
+//add boxplot formats
+function renderBoxPlot(d, e) {
     var trace1 = {
         x: [d.min, d.q25, d.q25, d.median, d.q75, d.q75, d.max],
         type: 'box',
@@ -82,17 +83,20 @@ function renderBoxPlot(d) {
     };
     var data1 = [trace1];
     var layout = {
-        title: 'Annual Salary Statistics',
-        autosize: true,
+        title: e+' Salary Statistics',
+        autosize: false,
+        height: 250,
+        width: "100%",
         xaxis: {
             range: [20000,170000],
             showticklabels: true,
         }
     };
 
-    Plotly.newPlot('whisker', data1, layout);
+    Plotly.newPlot(e, data1, layout);
 }
 
+//on click
 function clickState(e) {
     if (!zoom) {
         zoom = true
@@ -113,7 +117,8 @@ function clickState(e) {
                     data.min = s.attributes.A_PCT10;
                     data.max = s.attributes.A_PCT90;
                     info.update(data);
-                    renderBoxPlot(data);
+                    renderBoxPlot(data, 'Annual');
+                    renderBoxPlot(data, "Hourly");
                 };
             });
         });
@@ -124,9 +129,7 @@ function clickState(e) {
 
 }
 
-//this is where I add everything to the map. 
-//statesData is currently a json file located in my directories, but I need to be able to query data using python flask, and return a json.
-//this will probably require me to use d3.json and find the url. 
+//render map
 geojson = L.geoJson(statesData, {
     style: densityStyle,
     onEachFeature: onEachFeature

@@ -54,22 +54,22 @@ def home():
 
 @app.route("/phase1.html")
 def phase1():
-    """Return the Map.html."""
+    """Display phase1"""
     return render_template("phase1.html")
 
 @app.route("/phase2.html")
 def phase2():
-    """Return the homepage."""
+    """Display phase2."""
     return render_template("phase2.html")
 
 @app.route("/phase3.html")
 def phase3():
-    """Return the homepage."""
+    """Display phase3."""
     return render_template("phase3.html")
 
 @app.route("/phase4.html")
 def phase4():
-    """Return the homepage."""
+    """Display the homepage."""
     return render_template("phase4.html")
 
 #################################################
@@ -142,10 +142,10 @@ def get_json(table):
                         {
                             'name': c.company,
                             'pos': c.position,
-                        } for c in session.query(numByCompany.company,numByCompany.position).filter_by(state=s.state)
+                        } for c in session.query(numByCompany.company,numByCompany.position).filter_by(state=s.state).order_by(desc(numByCompany.position))
                     ],
                 },
-            } for s in session.query(numByState)
+            } for s in session.query(numByState).order_by(desc(numByState.position))
         ]
     else:
         return "Cannot find data table", 404
