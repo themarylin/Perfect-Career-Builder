@@ -8,7 +8,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
     maxZoom: 18
 }).addTo(map);
 
-
 //add hover info
 var info = L.control();
 
@@ -74,7 +73,7 @@ function resetFeature(e) {
     geojson.resetStyle(layer);
 }
 
-function renderBoxPlot(d) {
+function renderBoxPlot(d, e) {
     var trace1 = {
         x: [d.min, d.q25, d.q25, d.median, d.q75, d.q75, d.max],
         type: 'box',
@@ -82,15 +81,17 @@ function renderBoxPlot(d) {
     };
     var data1 = [trace1];
     var layout = {
-        title: 'Annual Salary Statistics',
-        autosize: true,
+        title: e + 'Salary Statistics',
+        autosize: false,
+        width: "90%",
+        height: 250,
         xaxis: {
-            range: [20000,170000],
-            showticklabels: true,
+            range: [20000, 200000],
+            showticklabels: true
         }
     };
 
-    Plotly.newPlot('whisker', data1, layout);
+    Plotly.newPlot(e, data1, layout);
 }
 
 function clickState(e) {
@@ -107,13 +108,22 @@ function clickState(e) {
                     data.total_jobs = s.attributes.TOT_EMP;
                     data.a_mean = s.attributes.A_MEAN;
                     data.jobs_per_1000 = s.attributes.JOBS_1000;
+                    //This grabs the annual quartile information
                     data.q25 = s.attributes.A_PCT25;
                     data.median = s.attributes.A_MEDIAN;
                     data.q75 = s.attributes.A_PCT75;
                     data.min = s.attributes.A_PCT10;
                     data.max = s.attributes.A_PCT90;
+                    //This grabs the hourly quartile information
+                    data.hq25 = s.attributes.H_PCT25;
+                    data.hmedian = s.attributes.H_MEDIAN;
+                    data.hq75 = s.attributes.H_PCT75;
+                    data.hmin = s.attributes.H_PCT10;
+                    data.hmax = s.attributes.H_PCT90;
+
                     info.update(data);
-                    renderBoxPlot(data);
+                    renderBoxPlot(data, 'Annual');
+                    renderBoxPlot(data, 'Hourly');
                 };
             });
         });
@@ -124,9 +134,7 @@ function clickState(e) {
 
 }
 
-//this is where I add everything to the map. 
-//statesData is currently a json file located in my directories, but I need to be able to query data using python flask, and return a json.
-//this will probably require me to use d3.json and find the url. 
+//render map
 geojson = L.geoJson(statesData, {
     style: densityStyle,
     onEachFeature: onEachFeature
