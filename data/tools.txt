@@ -198,111 +198,147 @@ mxnet
 1.8%
 0.6%
 na
-Oracle Adv. Analytics (51), 11.8% alone	 1.8%
+Oracle Adv. Analytics
+1.8%
 1.1%
 0.8%
-Amazon Machine Learning (49)	 1.7%
+Amazon Machine Learning
+1.7%
 1.9%
 0.7%
-Perl (49)	 1.7%
+Perl
+1.7%
 2.3%
 2.9%
-Minitab (42)	 1.5%
+Minitab
+1.5%
 na
 na
-DataScience.com (40), 10.0% alone	 1.4%
+DataScience.com
+1.4%
 na
 na
-Mathematica (40)	 1.4%
+Mathematica
+1.4%
 1.8%
 1.9%
-C4.5/C5.0/See5 (36)	 1.2%
+C4.5/C5.0/See5
+1.2%
 2.0%
 1.3%
-Torch (34)	 1.2%
+Torch
+1.2%
 1.0%
 1.0%
-SAP HANA (34)	 1.2%
+SAP HANA
+1.2%
 1.2%
 na
-Stata (33)	 1.1%
+Stata
+1.1%
 1.3%
 1.3%
-Julia (32)	 1.1%
+Julia
 1.1%
 1.1%
-MicroStrategy (32)	 1.1%
+1.1%
+MicroStrategy
+1.1%
 1.6%
 0.9%
-Vowpal Wabbit (32)	 1.1%
+Vowpal Wabbit
+1.1%
 1.6%
 1.3%
-SAP BusinessObjects Predictive Analytics (31), 6.5% alone	 1.1%
+SAP BusinessObjects Predictive Analytics
+1.1%
 1.5%
 3.0%
-Angoss (29), 34.5% alone	 1.0%
+Angoss
+1.0%
 0.1%
 0.4%
-BigML (29)	 1.0%
+BigML
+1.0%
 0.9%
 0.8%
-Lasagne (27)	 0.9%
+Lasagne
+0.9%
 na
 na
-XLMiner (19)	 0.7%
+XLMiner
+0.7%
 1.2%
 na
-Domino Data Labs (18), 11.1% alone	 0.6%
+Domino Data Labs
+0.6%
 na
 na
-F# (16), 12.5% alone	 0.6%
+F#
+0.6%
 0.4%
 0.7%
-Quest (formerly Statistica/ Dell/ StatSoft) (13), 7.7% alone	 0.5%
+Quest
+0.5%
 1.2%
 1.7%
-Lisp (11), 9.1% alone	 0.4%
+Lisp
+0.4%
 0.2%
 0.4%
-BayesiaLab (11)	 0.4%
+BayesiaLab
+0.4%
 0.6%
 0.6%
-Salford SPM/CART/RF/MARS/TreeNet (11)	 0.4%
+Salford SPM/CART/RF/MARS/TreeNet
+0.4%
 3.5%
 2.3%
-Clojure (8)	 0.3%
+Clojure
+0.3%
 0.4%
 0.5%
-RapidInsight/Veera (7)	 0.2%
+RapidInsight/Veera
+0.2%
 3.0%
 0.2%
-FICO (6)	 0.2%
+FICO
+0.2%
 0.2%
 0.0%
-Ontotext GraphDB (6)	 0.2%
+Ontotext GraphDB
+0.2%
 0.2%
 0.0%
-Ayasdi (5)	 0.2%
+Ayasdi
+0.2%
 0.3%
 2.0%
-Lavastorm (5)	 0.2%
+Lavastorm
+0.2%
 0.4%
 0.4%
-Turi (former Dato/GraphLab) (5)	 0.2%
+Turi
+0.2%
 2.4%
 0.5%
-Alpine Data Labs (4)	 0.1%
+Alpine Data Labs
+0.1%
 0.6%
 0.5%
-Birst (3)	 0.1%
+Birst
+0.1%
 0.2%
 0.1%
-Skytree (3)	 0.1%
+Skytree
+0.1%
 0.3%
 0.1%
-Actian (3)	 0.1%
+Actian
+0.1%
 0.3%
 2.0%
-Sisense (2)	 0.1%
+Sisense
+0.1%
 0.2%
 0.2%

@@ -28,13 +28,11 @@ engine = create_engine('sqlite:///data\\database.db')
 Base.prepare(engine, reflect=True)
 conn = engine.connect()
 session = Session(bind=engine)
-# data_science_companies
+
 DataScience = Base.classes.data_science_companies
-# job_common_words
-CommonWords = Base.classes.job_common_words
-# occupation-stats
 OccupationStats = Base.classes.occupation_stats
-# numByState
+ToolsPreference = Base.classes.tools_preference
+CommonTools = Base.classes.common_tools
 numByState = Base.classes.numByState
 numByCompany = Base.classes.numByCompany
 
@@ -92,11 +90,11 @@ def get_json(table):
                 }
             } for result in results]
 
-    elif table=="commonwords":
-        results = session.query(CommonWords)
+    elif table=="commontools":
+        results = session.query(CommonTools)
         data = [{
             'index': result.index,
-            'type': 'CommonWords',
+            'type': 'CommonTools',
             'attributes': {
                 'index': result.index,
                 'word': result.word,
@@ -104,6 +102,19 @@ def get_json(table):
                 }
             } for result in results]
 
+    elif table=="toolspreference":
+        results = session.query(ToolsPreference)
+        data = [{
+            'index': result.index,
+            'type': 'ToolsPreference',
+            'attributes': {
+                'index': result.index,
+                'toolName': result.tool_name,
+                'year2017':result.year_2017,
+                'year2016':result.year_2016,
+                'year2015':result.year_2015
+                }
+            } for result in results]
     elif table=="occupationstats":
         results = session.query(OccupationStats)
         data = [{
