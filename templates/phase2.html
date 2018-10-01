@@ -108,19 +108,14 @@
 		<div class="colorlib-services">
 			<div class="container">
 				<div class="container" id="bar_chart"></div>
-				<div class="container" id="bar_chart2">
-					<div class="col-md-2">
-						<div class="well">
-							<h5>SELECT Sample:</h5>
-							<select id="selDataset" onchange="optionChanged(this.value)"></select>
-						</div>
-						<div class="panel panel-primary">
-							<div class="panel-heading">
-								<h3 class="panel-title">Sample MetaData</h3>
-							</div>
-							<div id="sample-metadata" class="panel-body"></div>
-						</div>
+				<div class="col-md-2">
+					<div class="well">
+						<h5>SELECT Sample:</h5>
+						<select id="selDataset" onchange="optionChanged(this.value)"></select>
 					</div>
+				</div>
+				<div class="col-md-10 container-fluid">
+					<div class="container" id="bar_chart2" style="width:100%"></div>
 				</div>
 			</div>
 		</div>
