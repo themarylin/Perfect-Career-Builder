@@ -8,7 +8,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
     maxZoom: 18
 }).addTo(map);
 
-
 //add hover info
 var info = L.control();
 
@@ -74,7 +73,6 @@ function resetFeature(e) {
     geojson.resetStyle(layer);
 }
 
-//add boxplot formats
 function renderBoxPlot(d, e) {
     var trace1 = {
         x: [d.min, d.q25, d.q25, d.median, d.q75, d.q75, d.max],
@@ -83,13 +81,13 @@ function renderBoxPlot(d, e) {
     };
     var data1 = [trace1];
     var layout = {
-        title: e+' Salary Statistics',
+        title: e +' Salary Statistics',
         autosize: false,
         height: 250,
         width: "100%",
         xaxis: {
-            range: [20000,170000],
-            showticklabels: true,
+            range: [20000, 200000],
+            showticklabels: true
         }
     };
 
@@ -111,11 +109,19 @@ function clickState(e) {
                     data.total_jobs = s.attributes.TOT_EMP;
                     data.a_mean = s.attributes.A_MEAN;
                     data.jobs_per_1000 = s.attributes.JOBS_1000;
+                    //This grabs the annual quartile information
                     data.q25 = s.attributes.A_PCT25;
                     data.median = s.attributes.A_MEDIAN;
                     data.q75 = s.attributes.A_PCT75;
                     data.min = s.attributes.A_PCT10;
                     data.max = s.attributes.A_PCT90;
+                    //This grabs the hourly quartile information
+                    data.hq25 = s.attributes.H_PCT25;
+                    data.hmedian = s.attributes.H_MEDIAN;
+                    data.hq75 = s.attributes.H_PCT75;
+                    data.hmin = s.attributes.H_PCT10;
+                    data.hmax = s.attributes.H_PCT90;
+
                     info.update(data);
                     renderBoxPlot(data, 'Annual');
                     renderBoxPlot(data, "Hourly");
