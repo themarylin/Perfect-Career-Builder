@@ -35,6 +35,7 @@ ToolsPreference = Base.classes.tools_preference
 CommonTools = Base.classes.common_tools
 numByState = Base.classes.numByState
 numByCompany = Base.classes.numByCompany
+LinkedIn = Base.classes.linkedIn
 
 #################################################
 # Main routes
@@ -141,23 +142,50 @@ def get_json(table):
                 'A_PCT90': result.A_PCT90
                 }
             } for result in results]
-    elif table=="numbystate":
-        data = [
-            {
-                'state': s.state,
-                'attributes':
-                {
-                    'totalPositions': s.position,
-                    'totalCompanies': s.company,
-                    'companies': [
-                        {
-                            'name': c.company,
-                            'pos': c.position,
-                        } for c in session.query(numByCompany.company,numByCompany.position).filter_by(state=s.state).order_by(desc(numByCompany.position))
-                    ],
-                },
-            } for s in session.query(numByState).order_by(desc(numByState.position))
-        ]
+    elif table=="linkedin":
+        results = session.query(LinkedIn)
+        data = [{
+            'index': result.index,
+            'type': 'LinkedIn',
+            'attributes': {
+                'index': result.index,
+                'avg_n_pos_per_prev_tenure': result.avg_n_pos_per_prev_tenure,
+                'avg_pos_len': result.avg_pos_len,
+                'avg_prev_tenure_len': result.avg_prev_tenure_len,
+                'c_name': result.c_name,
+                'n_pos': result.n_pos,
+                'n_prev_tenures': result.n_prev_tenures,
+                'tenure_len': result.tenure_len,
+                'age': result.age,
+                'beauty': result.beauty,
+                'blur': result.blur,
+                'emo_anger': result.emo_anger,
+                'emo_disgust': result.emo_disgust,
+                'emo_fear': result.emo_fear,
+                'emo_happiness': result.emo_happiness,
+                'emo_neutral': result.emo_neutral,
+                'emo_sadness': result.emo_sadness,
+                'emo_surprise': result.emo_surprise,
+                'ethnicity': result.ethnicity,
+                'face_quality': result.face_quality,
+                'gender': result.gender,
+                'glass': result.glass,
+                'head_pitch': result.head_pitch,
+                'head_roll': result.head_roll,
+                'head_yaw': result.head_yaw,
+                'mouth_close': result.mouth_close,
+                'mouth_mask': result.mouth_mask,
+                'mouth_open': result.mouth_open,
+                'mouth_other': result.mouth_other,
+                'skin_acne': result.skin_acne,
+                'skin_dark_circle': result.skin_dark_circle,
+                'skin_health': result.skin_health,
+                'skin_stain': result.skin_stain,
+                'smile': result.smile,
+                'nationality': result.nationality,
+                'n_followers': result.n_followers,
+                }
+            } for result in results]
     else:
         return "Cannot find data table", 404
     return jsonify(data)
