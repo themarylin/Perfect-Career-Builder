@@ -27,7 +27,7 @@ info.update = function (values) {
 
 info.addTo(map);
 
-//add color to the map
+//add color and highlights
 function getColor(d) {
     return d > 1000 ? '#0C2C84' :
         d > 500 ? '#225EA8' :
@@ -81,10 +81,10 @@ function renderBoxPlot(d, e) {
     };
     var data1 = [trace1];
     var layout = {
-        title: e + 'Salary Statistics',
+        title: e +' Salary Statistics',
         autosize: false,
-        width: "90%",
         height: 250,
+        width: "100%",
         xaxis: {
             range: [20000, 200000],
             showticklabels: true
@@ -94,6 +94,7 @@ function renderBoxPlot(d, e) {
     Plotly.newPlot(e, data1, layout);
 }
 
+//on click
 function clickState(e) {
     if (!zoom) {
         zoom = true
@@ -123,7 +124,7 @@ function clickState(e) {
 
                     info.update(data);
                     renderBoxPlot(data, 'Annual');
-                    renderBoxPlot(data, 'Hourly');
+                    renderBoxPlot(data, "Hourly");
                 };
             });
         });

@@ -44,6 +44,15 @@
 	<!-- Modernizr JS -->
 	<script src="{{url_for('static', filename='js/modernizr-2.6.2.min.js')}}"></script>
 
+	<!--D3-->
+	<script src="/static/js/d3.min.js"></script>
+	<script src="//d3js.org/topojson.v1.min.js"></script>
+	<script src="https://d3js.org/d3-array.v1.min.js"></script>
+	<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+
+	<!--Plotly-->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -66,8 +75,8 @@
 						<div class="col-md-10 text-right menu-1">
 							<ul>
 								<li><a href="index.html">Home</a></li>
-								<li class="active"><a href="phase1.html">Phase 1</a></li>
-								<li><a href="phase2.html">Phase 2</a></li>
+								<li><a href="phase1.html">Phase 1</a></li>
+								<li class="active"><a href="phase2.html">Phase 2</a></li>
 								<li><a href="phase3.html">Phase 3</a></li>
 								<li><a href="phase4.html">Phase 4</a></li>
 								<li><a href="contact.html">Contact</a></li>
@@ -86,9 +95,9 @@
 					<div class="container">
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box">
-								<h2>Understanding the Industry through Geography</h2>
-								<h3>Phase 1</h3>
-								<p class="breadcrumbs"><span><a href="index.html">Home</a></span> <span>Phase 1</span></p>
+								<h2>Finding the Right Fit</h2>
+								<h3>Phase 2</h3>
+								<p class="breadcrumbs"><span><a href="index.html">Home</a></span> <span>Phase 2</span></p>
 							</div>
 						</div>
 					</div>
@@ -98,77 +107,18 @@
 
 		<div class="colorlib-services">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-								<i class="icon-browser"></i>
-							</span>
-							<div class="desc">
-								<h3>Create your own template</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.</p>
-							</div>
+				<div class="container" id="bar_chart"></div>
+				<div class="container" id="bar_chart2">
+					<div class="col-md-2">
+						<div class="well">
+							<h5>SELECT Sample:</h5>
+							<select id="selDataset" onchange="optionChanged(this.value)"></select>
 						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-								<i class="icon-download"></i>
-							</span>
-							<div class="desc">
-								<h3>Automatic Backup Data</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.</p>
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Sample MetaData</h3>
 							</div>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-								<i class="icon-layers"></i>
-							</span>
-							<div class="desc">
-								<h3>Page Builder</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-								<i class="icon-video"></i>
-							</span>
-							<div class="desc">
-								<h3>Watch tutorial</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-								<i class="icon-gears"></i>
-							</span>
-							<div class="desc">
-								<h3>Help &amp; Support</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-								<i class="icon-adjustments"></i>
-							</span>
-							<div class="desc">
-								<h3>Lots of features</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-									blind texts.</p>
-							</div>
+							<div id="sample-metadata" class="panel-body"></div>
 						</div>
 					</div>
 				</div>
@@ -189,8 +139,8 @@
 							<ul class="colorlib-footer-links">
 								<li><a href="index.html"><i class="icon-check"></i> Home</a></li>
 								<li><a href="gallery.html"><i class="icon-check"></i> Gallery</a></li>
-								<li><a href="phase1.html"><i class="icon-check"></i> Phase 1: map</a></li>
-								<li><a href="phase2.html"><i class="icon-check"></i> Phase 2: box and whisker</a></li>
+								<li><a href="phase1.html"><i class="icon-check"></i> Phase 1: map & box and whisker</a></li>
+								<li><a href="phase2.html"><i class="icon-check"></i> Phase 2: other</a></li>
 								<li><a href="phase3.html"><i class="icon-check"></i> Phase 3: bubble clusters</a></li>
 								<li><a href="phase4.html"><i class="icon-check"></i> Phase 4: histograms</a></li>
 							</ul>
@@ -264,6 +214,8 @@
 	<script src="{{url_for('static', filename='js/jquery.countTo.js')}}"></script>
 	<!-- Main -->
 	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+	<!--App-->
+	<script src="{{url_for('static', filename='js/phase2.js')}}"></script>
 
 </body>
 
