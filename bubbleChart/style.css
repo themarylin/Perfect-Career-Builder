@@ -1,0 +1,30 @@
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 90px;
+  height: 80px;
+  padding: 2px;
+  font: 12px Helvetica;
+  background: white;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+* {
+  font-family: "Helvetica Neue";
+}
+p, text {
+  font-size: 0.85em;
+}
+svg {
+  background: #f1f1f1;
+}
+.right {
+  position : absolute;
+  top:0;
+  right:0;
+  background: white;
+  width: 650px;
+  height: 650px;
+}
