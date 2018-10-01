@@ -2,7 +2,7 @@
     var width = 500,
         height = 500;
 
-    var svg = d3.select("#bubblechart")
+    var svg = d3.select("#bubblechart2")
         //   .select(".chart")
         //d3.select("#chart")
         .append("svg")
@@ -11,7 +11,7 @@
         .append("g")
         .attr("transform", "translate(0,0)")
 
-    var radiusScale = d3.scaleSqrt().domain([0, 4000]).range([0, 100])
+    var radiusScale = d3.scaleSqrt().domain([0, 100]).range([0, 100])
 
     //the simulation is a collection of forceSimulation
     //about where we want our circles to go
@@ -24,11 +24,11 @@
         //get circles to the middle
         //don't have them collide
         .force("collide", d3.forceCollide(function (d) {
-            return radiusScale(d.attributes.frequency) + 2;
+            return radiusScale(d.attributes.year2017) + 2;
         }))
 
     d3.queue()
-        .defer(d3.json, "/api/commontools")
+        .defer(d3.json, "/api/toolspreference")
         .await(ready)
 
     function ready(error, datapoints) {
@@ -45,16 +45,17 @@
                 return "#cbc9e2";
             }
         };
-        var circles = svg.selectAll(".word")
+
+        var circles = svg.selectAll(".tools")
             .data(datapoints)
             .enter().append("circle")
-            .attr("class", "word")
+            .attr("class", "tools")
             //radius of circles
             .attr("r", function (d) {
-                return radiusScale(d.attributes.frequency);
+                return radiusScale(d.attributes.year2017);
             })
             .attr("fill", function (d) {
-                return getColor(radiusScale(d.attributes.frequency));
+                return getColor(radiusScale(d.attributes.year2017));
             })
             .on('click', function (d) {
                 console.log(d)
@@ -72,7 +73,7 @@
         circles.on("mouseover", function (d) {
                 toolTip.style("display", "block")
                     .html(
-                        `<strong>${(d.attributes.word)}<strong><hr>${d.attributes.frequency}
+                        `<strong>${(d.attributes.toolName)}<strong><hr>${d.attributes.year2017}
           words`)
                     .style("left", d3.event.pageX + "px")
                     .style("top", d3.event.pageY + "px");
