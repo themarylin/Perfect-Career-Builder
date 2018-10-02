@@ -74,25 +74,50 @@ function resetFeature(e) {
 }
 
 function renderBoxPlot(d, e) {
-    var trace1 = {
-        x: [d.min, d.q25, d.q25, d.median, d.q75, d.q75, d.max],
-        type: 'box',
-        name: d.name
-    };
-    var data1 = [trace1];
-    var layout = {
-        title: e +' Salary Statistics',
-        autosize: false,
-        height: 250,
-        width: "100%",
-        xaxis: {
-            range: [20000, 200000],
-            showticklabels: true
-        }
-    };
 
-    Plotly.newPlot(e, data1, layout);
+    if (e == 'Annual'){
+        var trace1 = {
+            x: [d.min, d.q25, d.q25, d.median, d.q75, d.q75, d.max],
+            type: 'box',
+            name: d.name
+        };
+        var data1 = [trace1];
+        var layout = {
+            title: e +' Salary Statistics',
+            autosize: false,
+            height: 250,
+            width: "100%",
+            xaxis: {
+                range: [20000, 200000],
+                showticklabels: true
+            }
+        };
+    
+        Plotly.newPlot(e, data1, layout);
+    }
+    else{
+        var trace1 = {
+            x: [d.hmin, d.hq25, d.hq25, d.hmedian, d.hq75, d.hq75, d.hmax],
+            type: 'box',
+            name: d.name
+        };
+        var data1 = [trace1];
+        var layout = {
+            title: e +' Salary Statistics',
+            autosize: false,
+            height: 250,
+            width: "100%",
+            xaxis: {
+                range: [0, 100],
+                showticklabels: true
+            }
+        };
+    
+        Plotly.newPlot(e, data1, layout);
+    }
+    
 }
+
 
 //on click
 function clickState(e) {
