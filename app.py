@@ -24,7 +24,7 @@ app.config['JSON_SORT_KEYS'] = False
 #################################################
 
 Base = automap_base()
-engine = create_engine('sqlite:///data\\database.db')
+engine = create_engine('sqlite:///data/database.db')
 Base.prepare(engine, reflect=True)
 conn = engine.connect()
 session = Session(bind=engine)
