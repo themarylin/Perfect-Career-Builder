@@ -74,7 +74,7 @@
                 toolTip.style("display", "block")
                     .html(
                         `<strong>${(d.attributes.toolName)}<strong><hr>${d.attributes.year2017}
-          words`)
+          %`)
                     .style("left", d3.event.pageX + "px")
                     .style("top", d3.event.pageY + "px");
                 d3.select(this).style("stroke", "#323232");
