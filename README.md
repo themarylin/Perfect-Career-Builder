@@ -16,6 +16,8 @@ This application requires Python 3.6 to run, and MySQL instance 5.7 or greater.
 4. Copy the local link to your browser (note: this app is not compatible with IE 9)
 5. Explore!
 
+_NOTE:_ for Mac users, please change line 27 of app.py to `engine = create_engine('sqlite:////data/database.db')`
+
 ## Data Collection:
 In our search, we came across two key data sets. The first is from the Bureau of Labor, which gives us a pretty comprehensive data set of data scientist jobs available, the average annual salary by state, and job saturation statistics. The second data set is a LinkedIn analysis of people's profile pictures, which uses a machine learning algorithm to score a profile's picture based on attractiveness and emotional expression. It also includes other attributes as well, such as age, number of followers, and we decided to explore this data as well. 
 
